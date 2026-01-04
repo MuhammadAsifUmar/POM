@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 14: Communication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .flip-card {
+            perspective: 1000px;
+            height: 250px;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .flip-card-front {
+            background-color: #ffffff;
+            color: #1f2937;
+            border: 2px solid #e5e7eb;
+        }
+        .flip-card-back {
+            background-color: #7c3aed; /* Violet-600 */
+            color: white;
+            transform: rotateY(180deg);
+        }
+        .tree-line {
+            border-left: 2px solid #e5e7eb;
+            margin-left: 1.25rem;
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-violet-900 text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Module 14: Communication</h1>
+            <div class="space-x-4 text-sm">
+                <a href="#5ws" class="hover:text-violet-200">The 5 Ws</a>
+                <a href="#tree" class="hover:text-violet-200">Topic Tree</a>
+                <a href="#flashcards" class="hover:text-violet-200">Flashcards</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-violet-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Effective Communication</h2>
+            <p class="text-violet-100 max-w-2xl mx-auto">Mastering the flows, channels, and barriers of business interaction.</p>
+        </div>
+    </header>
+
+    <!-- The 5 Ws Section -->
+    <section id="5ws" class="py-12 container mx-auto px-4">
+        <h3 class="text-2xl font-bold text-violet-900 mb-8 text-center">The 5 Ws & H</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-violet-500">
+                <h4 class="font-bold text-xl mb-2 text-gray-700">WHAT</h4>
+                <p class="text-gray-600">The process of exchanging info: Sender &rarr; Encode &rarr; Channel &rarr; Decode &rarr; Receiver.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+                <h4 class="font-bold text-xl mb-2 text-gray-700">WHY</h4>
+                <p class="text-gray-600">Provides clarity, builds relationships, creates commitment, and defines expectations.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500">
+                <h4 class="font-bold text-xl mb-2 text-gray-700">WHERE</h4>
+                <p class="text-gray-600">Flows Downward (Instruction), Upward (Feedback), Horizontal (Peer), and Diagonal (Cross-level).</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-pink-500">
+                <h4 class="font-bold text-xl mb-2 text-gray-700">WHEN</h4>
+                <p class="text-gray-600">Use <strong>Oral</strong> for emotional/complex issues. Use <strong>Written</strong> for official records.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-red-500">
+                <h4 class="font-bold text-xl mb-2 text-gray-700">HOW</h4>
+                <p class="text-gray-600">It fails via <strong>Barriers</strong>: Filtering, Selective Perception, Overload, and Semantics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lecture Tree Section -->
+    <section id="tree" class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold text-violet-900 mb-8 text-center">Lecture Topic Tree</h3>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+                
+                <!-- Root -->
+                <div class="mb-4">
+                    <span class="bg-violet-900 text-white px-4 py-2 rounded-full font-bold">Communication</span>
+                </div>
+
+                <!-- Branch 1 -->
+                <div class="tree-line">
+                    <h4 class="font-bold text-lg text-violet-700 mb-2">1. The Process</h4>
+                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                        <li>Sender (Encoding) &rarr; Message &rarr; Receiver (Decoding)</li>
+                        <li><strong>Noise:</strong> Distractions that distort the message</li>
+                        <li><strong>Formal vs. Informal:</strong> Official structure vs. Social "Grapevine"</li>
+                    </ul>
+                </div>
+
+                <!-- Branch 2 -->
+                <div class="tree-line mt-4">
+                    <h4 class="font-bold text-lg text-violet-700 mb-2">2. Direction of Flows</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                            <span class="font-bold block text-sm">Vertical</span>
+                            <span class="text-xs text-gray-500">Downward (Manager to Staff)<br>Upward (Staff to Manager)</span>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                            <span class="font-bold block text-sm">Lateral / Cross</span>
+                            <span class="text-xs text-gray-500">Horizontal (Peer to Peer)<br>Diagonal (Different Dept & Level)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Branch 3 -->
+                <div class="tree-line mt-4">
+                    <h4 class="font-bold text-lg text-violet-700 mb-2">3. Barriers (The Enemy)</h4>
+                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                        <li><strong>Filtering:</strong> Hiding bad news (Sender)</li>
+                        <li><strong>Selective Perception:</strong> Hearing what you want (Receiver)</li>
+                        <li><strong>Semantics:</strong> Confusing Jargon</li>
+                        <li><strong>Info Overload:</strong> Too many emails!</li>
+                    </ul>
+                </div>
+
+                 <!-- Branch 4 -->
+                 <div class="tree-line mt-4">
+                    <h4 class="font-bold text-lg text-violet-700 mb-2">4. Channels</h4>
+                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                        <li><strong>Oral:</strong> Rich, immediate feedback (Face-to-face)</li>
+                        <li><strong>Written:</strong> Lean, permanent record (Email, Reports)</li>
+                        <li><strong>Active Listening:</strong> Eye contact, focus, empathy</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Flashcards Section -->
+    <section id="flashcards" class="py-12 container mx-auto px-4">
+        <h3 class="text-2xl font-bold text-violet-900 mb-8 text-center">Exam Flashcards</h3>
+        <p class="text-center text-gray-500 mb-8">Click a card to reveal the answer.</p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Card 1 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4 class="font-bold text-xl">Filtering</h4>
+                    </div>
+                    <div class="flip-card-back flex-col">
+                        <p class="font-semibold mb-2">Sender Barrier</p>
+                        <p class="text-sm">When a sender intentionally manipulates information (like omitting negative numbers) so the receiver sees it more favorably.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4 class="font-bold text-xl">Diagonal Communication</h4>
+                    </div>
+                    <div class="flip-card-back flex-col">
+                        <p class="font-semibold mb-2">Flow Direction</p>
+                        <p class="text-sm">Communication between employees at different levels AND in different departments (e.g., Marketing Associate talking to Finance Director).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4 class="font-bold text-xl">Active Listening</h4>
+                    </div>
+                    <div class="flip-card-back flex-col">
+                        <p class="font-semibold mb-2">The Solution</p>
+                        <p class="text-sm">Listening fully to the speaker without interrupting. Includes eye contact, reading body language, and asking clarifying questions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4 class="font-bold text-xl">Semantics</h4>
+                    </div>
+                    <div class="flip-card-back flex-col">
+                        <p class="font-semibold mb-2">Language Barrier</p>
+                        <p class="text-sm">Differences in the meaning of words. Often caused by technical "jargon" that the receiver doesn't understand.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4 class="font-bold text-xl">Selective Perception</h4>
+                    </div>
+                    <div class="flip-card-back flex-col">
+                        <p class="font-semibold mb-2">Receiver Barrier</p>
+                        <p class="text-sm">When the receiver hears only what they want to hear based on their own needs, motivations, or background.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4 class="font-bold text-xl">Rich vs. Lean Channels</h4>
+                    </div>
+                    <div class="flip-card-back flex-col">
+                        <p class="font-semibold mb-2">Channel Selection</p>
+                        <p class="text-sm"><strong>Rich:</strong> Face-to-Face (High feedback, emotional).<br><strong>Lean:</strong> Written Reports (Low feedback, factual/static).</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-violet-800 text-white py-6 text-center mt-12">
+        <p>Good luck! Remember: Feedback is the loop closer.</p>
+    </footer>
+
+</body>
+</html>

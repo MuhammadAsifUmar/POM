@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 8: Teams & Teamwork</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .flip-card {
+            perspective: 1000px;
+            height: 250px;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .flip-card-front {
+            background-color: #ffffff;
+            color: #1f2937;
+            border: 2px solid #e5e7eb;
+        }
+        .flip-card-back {
+            background-color: #c2410c; /* Orange-700 */
+            color: white;
+            transform: rotateY(180deg);
+        }
+        .tree-line {
+            border-left: 2px solid #e5e7eb;
+            margin-left: 1.25rem;
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-orange-800 text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Module 8: Teams</h1>
+            <div class="space-x-4 text-sm">
+                <a href="#5ws" class="hover:text-orange-200">The 5 Ws</a>
+                <a href="#tree" class="hover:text-orange-200">Topic Tree</a>
+                <a href="#flashcards" class="hover:text-orange-200">Flashcards</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-orange-700 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Groups & Teams</h2>
+            <p class="text-orange-100 max-w-2xl mx-auto">Understanding dynamics, types, and development stages.</p>
+        </div>
+    </header>
+
+    <!-- The 5 Ws Section -->
+    <section id="5ws" class="py-12 container mx-auto px-4">
+        <h3 class="text-2xl font-bold text-orange-900 mb-8 text-center">The 5 Ws & H</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-orange-500">
+                <h4 class="font-bold text-xl mb-2 text-gray-700">WHAT</h4>
+                <p class="text-gray-600">A team is 2+ people with a shared goal and mutual accountability. Key concept: <strong>Social Cohesion</strong> vs. <strong>Social Loafing</strong>.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+                <h4 class="font-bold text-xl mb-2 text-gray-700">WHY</h4>
+                <p class="text-gray-600"><strong>Pros:</strong> Creativity, shared workload, better problem solving.<br><strong>Cons:</strong> Conflict, slower decisions, unequal effort.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-green-500">
+                <h4 class="font-bold text-xl mb-2 text-gray-700">WHERE</h4>
+                <p class="text-gray-600"><strong>Functional:</strong> Same dept.<br><strong>Cross-Functional:</strong> Mixed depts.<br><strong>Virtual:</strong> Remote locations.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500">
+                <h4 class="font-bold text-xl mb-2 text-gray-700">WHEN</h4>
+                <p class="text-gray-600"><strong>Tuckman's Model:</strong> Forming &rarr; Storming &rarr; Norming &rarr; Performing &rarr; Adjourning.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-red-500">
+                <h4 class="font-bold text-xl mb-2 text-gray-700">HOW</h4>
+                <p class="text-gray-600">Build effective teams via clear <strong>Communication</strong>, establishing <strong>Norms</strong>, and enforcing <strong>Accountability</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lecture Tree Section -->
+    <section id="tree" class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold text-orange-900 mb-8 text-center">Lecture Topic Tree</h3>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+                
+                <!-- Root -->
+                <div class="mb-4">
+                    <span class="bg-orange-800 text-white px-4 py-2 rounded-full font-bold">Groups & Teams</span>
+                </div>
+
+                <!-- Branch 1 -->
+                <div class="tree-line">
+                    <h4 class="font-bold text-lg text-orange-700 mb-2">1. Core Dynamics</h4>
+                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                        <li><strong>Social Cohesion:</strong> Emotional bonds/cooperation.</li>
+                        <li><strong>Social Loafing:</strong> Doing less work in a group.</li>
+                        <li><strong>Collective Efficacy:</strong> Belief in ability to succeed.</li>
+                    </ul>
+                </div>
+
+                <!-- Branch 2 -->
+                <div class="tree-line mt-4">
+                    <h4 class="font-bold text-lg text-orange-700 mb-2">2. Types of Teams</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                            <span class="font-bold block text-sm">Structure</span>
+                            <span class="text-xs text-gray-500">Functional (Same Dept)<br>Cross-Functional (Mixed)</span>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                            <span class="font-bold block text-sm">Operation</span>
+                            <span class="text-xs text-gray-500">Self-Managed (No boss)<br>Virtual (Remote)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Branch 3 -->
+                <div class="tree-line mt-4">
+                    <h4 class="font-bold text-lg text-orange-700 mb-2">3. Tuckman's Stages</h4>
+                    <ol class="list-decimal pl-5 text-gray-600 space-y-1">
+                        <li><strong>Forming:</strong> Polite, unclear roles.</li>
+                        <li><strong>Storming:</strong> Conflict, frustration.</li>
+                        <li><strong>Norming:</strong> Trust, clear roles.</li>
+                        <li><strong>Performing:</strong> High efficiency.</li>
+                        <li><strong>Adjourning:</strong> Completion.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flashcards Section -->
+    <section id="flashcards" class="py-12 container mx-auto px-4">
+        <h3 class="text-2xl font-bold text-orange-900 mb-8 text-center">Exam Flashcards</h3>
+        <p class="text-center text-gray-500 mb-8">Click a card to reveal the answer.</p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Card 1 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4 class="font-bold text-xl">Social Loafing</h4>
+                    </div>
+                    <div class="flip-card-back flex-col">
+                        <p class="font-semibold mb-2">Negative Behavior</p>
+                        <p class="text-sm">When a group member exerts less effort because they are in a group (relying on others) than they would alone.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4 class="font-bold text-xl">Storming Stage</h4>
+                    </div>
+                    <div class="flip-card-back flex-col">
+                        <p class="font-semibold mb-2">Stage 2</p>
+                        <p class="text-sm">Marked by conflict, disagreement, and frustration as members clash over roles and working styles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4 class="font-bold text-xl">Cross-Functional Team</h4>
+                    </div>
+                    <div class="flip-card-back flex-col">
+                        <p class="font-semibold mb-2">Team Type</p>
+                        <p class="text-sm">Members from DIFFERENT departments working toward a common goal (e.g., Marketing + Engineering + Sales).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4 class="font-bold text-xl">Norming Stage</h4>
+                    </div>
+                    <div class="flip-card-back flex-col">
+                        <p class="font-semibold mb-2">Stage 3</p>
+                        <p class="text-sm">When conflicts resolve, trust is built, and clear roles/norms are established. The team starts to cooperate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4 class="font-bold text-xl">Collective Efficacy</h4>
+                    </div>
+                    <div class="flip-card-back flex-col">
+                        <p class="font-semibold mb-2">Positive Behavior</p>
+                        <p class="text-sm">The shared belief among team members that they are capable of organizing and successfully reaching their goals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4 class="font-bold text-xl">Self-Managed Team</h4>
+                    </div>
+                    <div class="flip-card-back flex-col">
+                        <p class="font-semibold mb-2">Team Type</p>
+                        <p class="text-sm">A team that operates with little or no supervision, managing their own tasks and decisions.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-orange-800 text-white py-6 text-center mt-12">
+        <p>Good luck! Remember the order: Form, Storm, Norm, Perform.</p>
+    </footer>
+
+</body>
+</html>
